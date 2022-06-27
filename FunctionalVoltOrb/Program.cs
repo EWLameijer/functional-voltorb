@@ -1,16 +1,15 @@
 ﻿
 
-class Program
+internal class Program
 {
-    static void Main()
+    private static void Main()
     {
-        Game game = Game.Load(@"D:\Development\C#\functional-voltorb\FunctionalVoltOrb\example_boards.txt");
+        Game game = Game.Load(@"C:\Users\eric_\source\repos\LocalFunctionalVoltorb\LocalFunctionalVoltorb\example_boards.txt");
         do
         {
             Console.WriteLine(game);
             var flips = Console.ReadLine();
-            game.ExecuteFlips(flips);
-
+            game.ExecuteFlips(flips!);
         } while (true);
     }
 }
